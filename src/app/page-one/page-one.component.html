@@ -1,0 +1,7 @@
+<form class="form" [formGroup]="form">
+    <label for="directive">identification number</label>
+    <input formControlName="directive" type="text" id="directive">
+    <p *ngIf="InformationText == 'valid'" style="color: green;">ვალიდურია!</p>
+    <p *ngIf="InformationText == 'invalid'" style="color: red;">არ არის ვალიდური!</p>
+    <button class="btn btn-primary" (click)="onSubmit()">submit</button>
+</form>
